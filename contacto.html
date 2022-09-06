@@ -8,16 +8,66 @@
     <title>Codo Moda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Imagenes/percha.png" type="imagen/x-icon">
+</head>
 
 <body>
     <header>
-        <h2>Formulario de Contacto</h2>
+        <h2>Contacto</h2>
+        <img class="logo" src="./Imagenes/logo3.png" alt="logo">
         <nav>
             <img class="percha" src="Imagenes/percha.png" alt="percha">
             <a class="home" href="index.html">Volver a la home</a>
         </nav>
     </header>
 
+    <main>
+        <h3>¿Querés tener una sesión de styling gratuita?</h3>
+    <ul>
+        <li type="circle">Si te divierte armar looks...</li>
+        <li type="circle">Si estas una hora probandote ropa antes de salir...</li>
+        <li type="circle">Si te perdés en Instagram mirando looks...</li>
+    </ul>
+    <p>El styling es lo tuyo!!!</p>
+    <br>
+    <h3>Registrate y te contactamos para tener tu sesión de styling!</h3>
+        <form action="show_data.html" target="_blank">
+            <label for="firstname">Nombre: </label><input size="30" type="text" name="firstname"> <br><br>
+            <label for="lastname">Apellido:</label><input size="30" type="text" name="lastname"> <br><br>
+            <label for="street">Direccion:</label><input type="text" name="address"> <br><br>
+            <label for="number">Numero:</label><input type="number" name="number"><br><br>
+            <label for="city">Ciudad: </label><input type="text" name="city" value="C.A.B.A."> <br><br>
+            <label for="zipcode">Código Postal:</label><input type="text" name="zipcode"> <br> <br>
+            <label for="telefono">Celular: </label><input type="tel" name="telefono"> <br><br>
+            <label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="birthdate"> <br><br>
+            <label for="mail">Mail: </label><input type="email" name="mail"> <br><br>
+            <label for="clave">Clave: </label><input type="password" name="clave"> <br><br>
+
+            <p>Género:
+                <input type="radio" name="gender" value="hombre" checked>Hombre
+                <input type="radio" name="gender" value="Mujer">Mujer
+                <input type="radio" name="gender" value="Otro">No Binario
+            </p>
+            <p>Modalidad: (podes seleccionar ambas si te es indistinto)
+                <input type="checkbox" name="modalidad" value="virtual"> Virtual
+                <input type="checkbox" name="modalidad" value="presencial"> Presencial
+            </p>
+
+            <label for="estudios">Disponibilidad</label>
+            <select id="estudios" name="estudios">
+                <option value="none"> </option>
+                <option value="primaria">Lunes a Viernes Mañana</option>
+                <option value="secundaria">Lunes a Viernes Tarde</option>
+                <option value="terciario">Sábado Mañana</option>
+                <option value="universitario">Sábado Tarde</option>
+            </select>
+            <br>
+
+            <label for="comentarios">Comentarios:</label> <textarea placeholder="Tus sugerencias nos sirven para mejorar" name="comentarios" rows="10" cols="30"></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+            <button type="reset">Reset</button>
+        </form>
+    </main>
 </body>
 
 </html>
