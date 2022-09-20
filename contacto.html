@@ -15,6 +15,59 @@
             <a class="home" href ="index.html">Volver a la home</a>
         </nav>
     </header>
-
+    <P>Rellena nuestro formulario,<span> que encontrarás más adelante</span>,
+     y acepta la política de privacidad. La fecha elegida es una aproximación 
+    que será revisada por nuestros estilistas. Te llamaremos personalmente 
+    para verificar tu cita.
+    </P>
+    <p class="cita">Pide tu cita online rellenando el formulario a continuación.</p>
+<div class="containerestilo">   
+    <div><img class= "estilo" src ="Imagenes/estilo.png" alt="estilo"></div>    
+    <div>
+        <form action="/registro" method="post">
+        <label class="form" for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br><br>
+        <label class="form" for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+        <br><br>
+        <label for="estilo">Elija tu estilo</label>
+        <select name="estilo">
+            <option>Casual</option>
+            <option>Clásica</option>
+            <option>Romántica</option>
+            <option>Deportiva</option>
+            <option>Grunge</option>
+            <option>Hipster</option>
+        </select>
+        <br><br>
+       <div>
+            <label for="fecha">Fecha aproximada</label>
+            <input type="date" name="fecha">
+       </div>
+       <div>
+          <textarea placeholder ="Deje un mensaje contanto un poco del dia a dia, trabajo y actividades que te gustan."></textarea>
+          <div>
+            <label for="color">Elija 2 colores que más combinan con tu estilo.</label>
+            <p> <input type="checkbox" name="color" value="Negro"> Negro </p>
+            <p> <input type="checkbox" name="color" value="Gris"> Gris </p>
+            <p> <input type="checkbox" name="color" value="Blanco"> Blanco </p>
+            <p> <input type="checkbox" name="color" value="Rojo"> Rojo </p>
+            <p> <input type="checkbox" name="color" value="Rosa"> Rosa </p>
+            <p> <input type="checkbox" name="color" value="Verde"> Verde </p>
+            <p> <input type="checkbox" name="color" value="Amarillo"> Amarillo </p>
+            <p> <input type="checkbox" name="color" value="Marron"> Marron </p>
+          </div>  
+          <div>
+            <label for="tipo">Salgo:</label>
+           <p> <input type="radio" name="tipo" value="con"> con maquillaje </p>
+           <p> <input type="radio" name="tipo" value="sin"> sin maquillaje </p>
+          </div>  
+       </div>
+       <div>
+        <button class="enviar" type="submit">Solicitar consultoria</button>
+       </div>    
+    </div>  
+</div>
 </body>
 </html>
