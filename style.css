@@ -1,12 +1,22 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: rgb(148, 177, 148);
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+/*
+a {
+    color: rgb(16, 55, 36);
+    text-decoration: none;
+}
+*/
+
+/* index */
 body header {
     display: flex;
     flex-direction: row;
@@ -32,24 +42,54 @@ h3 {
 
 p { text-align: justify;
     color: rgb(16, 55, 36)
-
 }
 
 .percha {
     width: 30px;
-
 }
 
 .logo {
     width: 250px;
 }
+
 .home {
     color: rgb(16, 55, 36)
     padding: 0rem 1rem 0rem 1rem;
-
 }
 
+
+/* un podo de historia */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    gap: 10px
+}
+
+.card {
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(215, 186, 186)/* rgb(243, 221, 206)*/;
+   }
+
+   .card:hover{
+    background-color: rgb(199, 143, 145) /*rgb(230, 163, 129)*/;
+   }
+
+.card p, .card h3{
+    padding:10px}
+
+.card>img{ 
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* footer */
+footer{
+    
 }
