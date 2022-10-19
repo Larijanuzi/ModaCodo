@@ -31,8 +31,20 @@
         <label class="form" for="apellido">Apellido</label>
         <input type="text" name="apellido" id="apellido">
         <br><br>
-        <label for="estilo">Elija tu estilo</label>
-        <select name="estilo">
+        <div>
+           <label for="nacimiento">Fecha Nacimiento</label>
+           <input type="date" name="nacimiento" id="nacimiento">
+       </div>
+       <br>
+       <div>
+        <label for="celular">Celular</label>
+        <input type="number" name="celular" id="celular">
+    </div>
+    <br>
+       <label class="form" for="mail">Mail</label>
+       <input type="mail" name="mail" id="mail">
+       <label for="estilo">Elija tu estilo</label>
+       <select name="estilo">
             <option>Casual</option>
             <option>Clásica</option>
             <option>Romántica</option>
@@ -46,17 +58,12 @@
             <input type="date" name="fecha">
        </div>
        <div>
-          <textarea placeholder ="Deje un mensaje contanto un poco del dia a dia, trabajo y actividades que te gustan."></textarea>
+          <textarea placeholder ="Tus sugerencias nos sirven para mejorar."></textarea>
           <div>
-            <label for="color">Elija 2 colores que más combinan con tu estilo.</label>
-            <p> <input type="checkbox" name="color" value="Negro"> Negro </p>
-            <p> <input type="checkbox" name="color" value="Gris"> Gris </p>
-            <p> <input type="checkbox" name="color" value="Blanco"> Blanco </p>
-            <p> <input type="checkbox" name="color" value="Rojo"> Rojo </p>
-            <p> <input type="checkbox" name="color" value="Rosa"> Rosa </p>
-            <p> <input type="checkbox" name="color" value="Verde"> Verde </p>
-            <p> <input type="checkbox" name="color" value="Amarillo"> Amarillo </p>
-            <p> <input type="checkbox" name="color" value="Marron"> Marron </p>
+            <label for="genero">Género</label>
+            <p> <input type="radio" name="genero" value="Hombre"> Hombre </p>
+            <p> <input type="radio" name="genero" value="Mujer"> Mujer </p>
+            <p> <input type="radio" name="genero" value="noBinario"> No Binario </p>
           </div>  
           <div>
             <label for="tipo">Salgo:</label>
@@ -70,4 +77,15 @@
     </div>  
 </div>
 </body>
+<footer>
+    Seguinos en las redes sociales
+    <nav>
+        <a href="http://instagram.com" target="_blank">
+            <img src="./Imagenes/instagram.png" alt="instagram" width="20px">
+        </a>
+        <a href="http://facebook.com" target="_blank">
+            <img src="./Imagenes/facebook.png" alt="facebook" width="20px">
+        </a>
+    </nav>
+</footer>
 </html>

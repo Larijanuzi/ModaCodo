@@ -5,7 +5,7 @@
   }
   
 body {
-    background-color: #c57667;
+    background-color: #e0c5bf;
     font-family: Arial, Helvetica, sans-serif;
 }
 body header {
@@ -87,14 +87,36 @@ nav a:hover {
 
 }
 .estilo {
-    width: 40%;
+    padding-left: 100px;
+    max-width: 60%;
 }
 .container1 {
-    display: flex; 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    gap: 10px
 }
 .item {
-	display: flex;
-   	text-align: center;
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(215, 186, 186)/* rgb(243, 221, 206)*/;
+   }
+
+.item:hover{
+    background-color: rgb(199, 143, 145) /*rgb(230, 163, 129)*/;
+   }
+
+.item p, .item h3{
+    padding:10px}
+
+.item>img{ 
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
 }
 textarea {
     width: 40%;
@@ -117,20 +139,19 @@ textarea {
 }
 form {
     display: block;
-    margin: auto;
+    margin-right: 80px;
+    padding-right: 30px;
     width: 450px;
     background: rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     border-radius: 7px;
 }
 .containerestilo {
-    display: block;
-    padding-left: 200px;
+    display: flex;
 
 }
 .slider {
     display: block;
-
     width: 1100px;
     margin: auto;
     margin-top: 20px;
