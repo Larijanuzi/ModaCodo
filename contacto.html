@@ -21,6 +21,40 @@
     </header>
 
     <main>
+        <div id="app">
+
+        
+            <div class="container">
+                <h2>Ellos recomiendan nuestros servicios!</h2>
+                <br>
+                <div v-if="error">
+                    Algo salió mal...
+                    Error: {{nroerror}}
+                </div>
+                <div v-else-if="cargando==false"    class="container">
+    
+           
+            <section class="container" id="container">
+                
+                <div v-for="user in results" class="card" id="users">
+                    
+                <img id="picture" width="100" :src="user.picture.large" :alt="user.name.first">
+                    <span>
+                    <p id="user">{{user.name.first}}</p>    
+                    <p id="user">{{user.dob.age}} años</p>
+                    </span>
+                </div>
+    
+            </section> 
+        </div>
+         
+        <div v-else   class="spinner-border">
+    
+        </div>
+
+        </div>
+   <br>
+
         <h3>¿Querés tener una sesión de styling gratuita?</h3>
     <ul>
         <li type="circle">Si te divierte armar looks...</li>
@@ -68,6 +102,10 @@
             <button type="reset">Reset</button>
         </form>
     </main>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+ </body>   
 <br><br>
     <footer>
         <p>Seguinos en las redes</p>
@@ -79,6 +117,6 @@
                 <img src="./Imagenes/facebook2.png" alt="facebook" width="20px"></a>
             </nav>
     </footer>
-</body>
+
 
 </html>
