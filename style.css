@@ -62,6 +62,26 @@ p { text-align: justify;
     padding: 0rem 1rem 0rem 1rem;
 }
 
+main>p {
+    border: 2px solid rgb(16, 55, 36);
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* contacto */
+.styling>ul, .styling>p {
+    text-align: center;
+    margin: auto;
+
+}
+
+.styling {
+    border: 2px solid rgb(16, 55, 36);
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 650px;
+}
 
 /* un podo de historia */
 .container {
@@ -87,7 +107,6 @@ p { text-align: justify;
 
 .card p, .card h3{
     padding:10px;
-
 }
 
 .card>img{ 
@@ -99,7 +118,7 @@ p { text-align: justify;
 
 /*contacto*/
 #users{
-    width: 8%;
+    width: 100px;
     border-radius: 50px;
 }
 
@@ -114,8 +133,66 @@ span>p{
     color: rgb(16, 55, 36)
 }
 
+.warnings{
+    width: 200px;
+    color:rgb(16, 55, 36)
+}
+
+.containerformulario{
+    display: flex;
+    display: block;
+    margin: auto;
+    padding-right: 30px;
+    width: 450px;
+    background: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+.formbutton, .resetbutton {
+    background-color: grey;
+    width: 134px;
+    height: 44px;
+    border-radius: 50px;
+    color: white;
+    border: none;
+
+}
+
+.formbutton:hover {
+    background-color: rgb(57, 54, 54);
+}
+
+.resetbutton:hover {
+    background-color: rgb(57, 54, 54);
+}
 
 /* footer */
 footer{
     
+}
+
+
+@media screen and (max-width: 640px){
+#logo2 {
+    width: 100px;
+    }    
+.contacto{
+    font-size: 2rem;
+}
+}
+@media screen and (min-width:640px) and (max-width:1280px) {
+    #logo {
+        width: 200px;
+    }
+    .contacto{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width:1280px){
+    #logo {
+        width: 300px;
+    }
+    .contacto{
+        font-size: 50px;
+    }
 }

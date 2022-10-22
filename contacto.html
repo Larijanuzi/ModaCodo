@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <h2>Contacto</h2>
-        <img class="logo" src="./Imagenes/logo4.png" alt="logo">
+        <h2 class="contacto">Contacto</h2>
+        <img class="logo" id="logo2" src="./Imagenes/logo4.png" alt="logo">
         <nav>
             <img class="percha" src="Imagenes/percha.png" alt="percha">
             <a class="home" href="index.html">Volver a la home</a>
@@ -23,18 +23,18 @@
     <main>
         <div id="app">
 
-        
+        <h2 class="contacto">Ellos recomiendan nuestros servicios!</h2>
+        <br>
             <div class="container">
-                <h2>Ellos recomiendan nuestros servicios!</h2>
-                <br>
+                
                 <div v-if="error">
                     Algo salió mal...
                     Error: {{nroerror}}
                 </div>
                 <div v-else-if="cargando==false"    class="container">
     
-           
-            <section class="container" id="container">
+           <span class="usuarios">
+            <section class="container" id="contenedor">
                 
                 <div v-for="user in results" class="card" id="users">
                     
@@ -46,6 +46,7 @@
                 </div>
     
             </section> 
+        </span>
         </div>
          
         <div v-else   class="spinner-border">
@@ -53,28 +54,33 @@
         </div>
 
         </div>
-   <br>
+   <br><br>
 
-        <h3>¿Querés tener una sesión de styling gratuita?</h3>
+    <div class="styling">
+        <h3>¿Querés tener una sesión de styling gratuita?</h3> <br>
     <ul>
         <li type="circle">Si te divierte armar looks...</li>
         <li type="circle">Si estas una hora probandote ropa antes de salir...</li>
         <li type="circle">Si te perdés en Instagram mirando looks...</li>
     </ul>
     <p>El styling es lo tuyo!!!</p>
+    </div>
     <br>
+
     <h3>Registrate y te contactamos para tener tu sesión de styling!</h3>
-        <form action="show_data.html" target="_blank">
-            <label for="firstname">Nombre: </label><input size="30" type="text" name="firstname"> <br><br>
-            <label for="lastname">Apellido:</label><input size="30" type="text" name="lastname"> <br><br>
-            <label for="street">Direccion:</label><input type="text" name="address"> <br><br>
-            <label for="number">Numero:</label><input type="number" name="number"><br><br>
-            <label for="city">Ciudad: </label><input type="text" name="city" value="C.A.B.A."> <br><br>
-            <label for="zipcode">Código Postal:</label><input type="text" name="zipcode"> <br> <br>
-            <label for="telefono">Celular: </label><input type="tel" name="telefono"> <br><br>
-            <label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="birthdate"> <br><br>
-            <label for="mail">Mail: </label><input type="email" name="mail"> <br><br>
-            <label for="clave">Clave: </label><input type="password" name="clave"> <br><br>
+    <br>
+    <div class="containerformulario">    
+    <form action="./show-data.html" target="_blank" id="form">
+            <label for="firstname">Nombre: </label><input size="30" type="text" name="firstname" id="firstname"> <br><br>
+            <label for="lastname">Apellido:</label><input size="30" type="text" name="lastname" id="lastname"> <br><br>
+            <label for="street">Direccion:</label><input type="text" name="address" id="address"> <br><br>
+            <label for="number">Numero:</label><input type="number" name="number" id="number"><br><br>
+            <label for="city">Ciudad: </label><input type="text" name="city" id="city" value="C.A.B.A."> <br><br>
+            <label for="zipcode">Código Postal:</label><input type="text" name="zipcode" id="zipcode"> <br> <br>
+            <label for="phone">Celular: </label><input type="tel" name="phone" id="phone"> <br><br>
+            <label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="birthdate" id="birthdate"> <br><br>
+            <label for="mail">Mail: </label><input type="email" name="mail" id="mail"> <br><br>
+            <label for="pass">Clave: </label><input type="password" name="pass" id="pass"> <br><br>
 
             <p>Género:
                 <input type="radio" name="gender" value="hombre" checked>Hombre
@@ -97,10 +103,20 @@
             <br>
 
             <label for="comentarios">Comentarios:</label> <textarea placeholder="Tus sugerencias nos sirven para mejorar" name="comentarios" rows="10" cols="30"></textarea>
+            <br><br>
+            <p class="warnings" id="warnings"></p>
             <br>
-            <input type="submit" value="Enviar">
-            <button type="reset">Reset</button>
+            <input class="formbutton" type="submit" value="Enviar Formulario">
+            <button class="resetbutton" type="reset">Reset</button>
+            
         </form>
+    </div>
+<br><br>
+    <h3>Acá están nuestras oficinas, te esperamos!</h3>
+    <br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.3467513672995!2d-58.4063202407707!3d-34.57786828836063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb563ecabfaa7%3A0xd3566c859b347565!2sAv.%20Pres.%20Figueroa%20Alcorta%203200%2C%20C1425CKX%20CABA!5e0!3m2!1sen!2sar!4v1666386985263!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><br>
+    <p>Av. Pte. Figueroa Alcorta 3200, Palermo.</p>
     </main>
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
