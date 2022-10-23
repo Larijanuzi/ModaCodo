@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,85 +8,131 @@
     <title>Codo Moda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Imagenes/percha.png" type="imagen/x-icon">
+</head>
+
 <body>
     <header>
-        <h1>Formulario de Contacto</h1>
+        <h2 class="contacto">Contacto</h2>
+        <img class="logo" id="logo2" src="./Imagenes/logo.png" alt="logo">
         <nav>
-            <img class= "percha" src ="Imagenes/percha.png" alt="percha">
-            <a class="home" href ="index.html">Volver a la home</a>
+            <img class="percha" src="Imagenes/percha.png" alt="percha">
+            <a class="home" href="index.html">Volver a la home</a>
         </nav>
     </header>
-    <P>Rellena nuestro formulario,<span> que encontrarás más adelante</span>,
-     y acepta la política de privacidad. La fecha elegida es una aproximación 
-    que será revisada por nuestros estilistas. Te llamaremos personalmente 
-    para verificar tu cita.
-    </P>
-    <p class="cita">Pide tu cita online rellenando el formulario a continuación.</p>
-<div class="containerestilo">   
-    <div><img class= "estilo" src ="Imagenes/estilo.png" alt="estilo"></div>    
-    <div>
-        <form action="/registro" method="post">
-        <label class="form" for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
-        <br><br>
-        <label class="form" for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido">
-        <br><br>
-        <div>
-           <label for="nacimiento">Fecha Nacimiento</label>
-           <input type="date" name="nacimiento" id="nacimiento">
-       </div>
-       <br>
-       <div>
-        <label for="celular">Celular</label>
-        <input type="number" name="celular" id="celular">
+
+    <main>
+        <div id="app">
+
+        <h2 class="contacto">Ellos recomiendan nuestros servicios!</h2>
+        <br>
+            <div class="container">
+                
+                <div v-if="error">
+                    Algo salió mal...
+                    Error: {{nroerror}}
+                </div>
+                <div v-else-if="cargando==false"    class="container">
+    
+           <span class="usuarios">
+            <section class="container" id="contenedor">
+                
+                <div v-for="user in results" class="card" id="users">
+                    
+                <img id="picture" width="100" :src="user.picture.large" :alt="user.name.first">
+                    <span>
+                    <p id="user">{{user.name.first}}</p>    
+                    <p id="user">{{user.dob.age}} años</p>
+                    </span>
+                </div>
+    
+            </section> 
+        </span>
+        </div>
+         
+        <div v-else   class="spinner-border">
+    
+        </div>
+
+        </div>
+   <br><br>
+
+    <div class="styling">
+        <h3>¿Querés tener una sesión de styling gratuita?</h3> <br>
+    <ul>
+        <li type="circle">Si te divierte armar looks...</li>
+        <li type="circle">Si estas una hora probandote ropa antes de salir...</li>
+        <li type="circle">Si te perdés en Instagram mirando looks...</li>
+    </ul>
+    <p>El styling es lo tuyo!!!</p>
     </div>
     <br>
-       <label class="form" for="mail">Mail</label>
-       <input type="mail" name="mail" id="mail">
-       <label for="estilo">Elija tu estilo</label>
-       <select name="estilo">
-            <option>Casual</option>
-            <option>Clásica</option>
-            <option>Romántica</option>
-            <option>Deportiva</option>
-            <option>Grunge</option>
-            <option>Hipster</option>
-        </select>
-        <br><br>
-       <div>
-            <label for="fecha">Fecha aproximada</label>
-            <input type="date" name="fecha">
-       </div>
-       <div>
-          <textarea placeholder ="Tus sugerencias nos sirven para mejorar."></textarea>
-          <div>
-            <label for="genero">Género</label>
-            <p> <input type="radio" name="genero" value="Hombre"> Hombre </p>
-            <p> <input type="radio" name="genero" value="Mujer"> Mujer </p>
-            <p> <input type="radio" name="genero" value="noBinario"> No Binario </p>
-          </div>  
-          <div>
-            <label for="tipo">Salgo:</label>
-           <p> <input type="radio" name="tipo" value="con"> con maquillaje </p>
-           <p> <input type="radio" name="tipo" value="sin"> sin maquillaje </p>
-          </div>  
-       </div>
-       <div>
-        <button class="enviar" type="submit">Solicitar consultoria</button>
-       </div>    
-    </div>  
-</div>
-</body>
-<footer>
-    Seguinos en las redes sociales
-    <nav>
-        <a href="http://instagram.com" target="_blank">
-            <img src="./Imagenes/instagram.png" alt="instagram" width="20px">
-        </a>
-        <a href="http://facebook.com" target="_blank">
-            <img src="./Imagenes/facebook.png" alt="facebook" width="20px">
-        </a>
-    </nav>
-</footer>
+
+    <h3>Registrate y te contactamos para tener tu sesión de styling!</h3>
+    <br>
+    <div class="containerformulario">    
+    <form action="./show-data.html" target="_blank" id="form">
+            <label for="firstname">Nombre: </label><input size="30" type="text" name="firstname" id="firstname"> <br><br>
+            <label for="lastname">Apellido:</label><input size="30" type="text" name="lastname" id="lastname"> <br><br>
+            <label for="street">Direccion:</label><input type="text" name="address" id="address"> <br><br>
+            <label for="number">Numero:</label><input type="number" name="number" id="number"><br><br>
+            <label for="city">Ciudad: </label><input type="text" name="city" id="city" value="C.A.B.A."> <br><br>
+            <label for="zipcode">Código Postal:</label><input type="text" name="zipcode" id="zipcode"> <br> <br>
+            <label for="phone">Celular: </label><input type="tel" name="phone" id="phone"> <br><br>
+            <label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> <input type="date" name="birthdate" id="birthdate"> <br><br>
+            <label for="mail">Mail: </label><input type="email" name="mail" id="mail"> <br><br>
+            <label for="pass">Clave: </label><input type="password" name="pass" id="pass"> <br><br>
+
+            <p>Género:
+                <input type="radio" name="gender" value="hombre" checked>Hombre
+                <input type="radio" name="gender" value="Mujer">Mujer
+                <input type="radio" name="gender" value="Otro">No Binario
+            </p>
+            <p>Modalidad: (podes seleccionar ambas si te es indistinto)
+                <input type="checkbox" name="modalidad" value="virtual"> Virtual
+                <input type="checkbox" name="modalidad" value="presencial"> Presencial
+            </p>
+
+            <label for="estudios">Disponibilidad</label>
+            <select id="estudios" name="estudios">
+                <option value="none"> </option>
+                <option value="primaria">Lunes a Viernes Mañana</option>
+                <option value="secundaria">Lunes a Viernes Tarde</option>
+                <option value="terciario">Sábado Mañana</option>
+                <option value="universitario">Sábado Tarde</option>
+            </select>
+            <br>
+
+            <label for="comentarios">Comentarios:</label> <textarea placeholder="Tus sugerencias nos sirven para mejorar" name="comentarios" rows="10" cols="30"></textarea>
+            <br><br>
+            <p class="warnings" id="warnings"></p>
+            <br>
+            <input class="formbutton" type="submit" value="Enviar Formulario">
+            <button class="resetbutton" type="reset">Reset</button>
+            
+        </form>
+    </div>
+<br><br>
+    <h3>Acá están nuestras oficinas, te esperamos!</h3>
+    <br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.3467513672995!2d-58.4063202407707!3d-34.57786828836063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb563ecabfaa7%3A0xd3566c859b347565!2sAv.%20Pres.%20Figueroa%20Alcorta%203200%2C%20C1425CKX%20CABA!5e0!3m2!1sen!2sar!4v1666386985263!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><br>
+    <p>Av. Pte. Figueroa Alcorta 3200, Palermo.</p>
+    </main>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+ </body>   
+<br><br>
+    <footer>
+        <p>Seguinos en las redes</p>
+       <br>
+            <nav>
+                <a href="https://instagram.com" target="_blank">
+                <img src="./Imagenes/instagram.png" alt="instagram" width="20px"></a>
+                <a href="https://facebook.com" target="_blank">
+                <img src="./Imagenes/facebook.png" alt="facebook" width="20px"></a>
+            </nav>
+    </footer>
+
+
 </html>
